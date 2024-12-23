@@ -1,24 +1,23 @@
 package net.happiness.burger;
 
+import java.util.List;
+
 public abstract class Hamburger {
 
-    String name;
-    String meat;
-    String vegetables;
-    String cheese;
-    String sauce;
-    String buns;
+    protected String name;
+    protected List<String> composition;
+    protected int calories;
 
-    public void prepare() {
-        System.out.printf("Preparing ingredients: Meat - %s, Vegetables - %s, Cheese - %s, Sauce - %s, Buns - %s", meat, vegetables, cheese, sauce, buns);
+    public String getName() {
+        return name;
     }
 
-    public void cook() {
-        System.out.println("Cooking burger - " + name);
+    public List<String> getComposition() {
+        return composition;
     }
 
-    public void box() {
-        System.out.println("Boxing burger");
+    public int getCalories() {
+        return calories;
     }
 
 }
